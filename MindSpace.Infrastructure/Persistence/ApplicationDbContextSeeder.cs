@@ -1,6 +1,15 @@
-using MindSpace.Application.Commons.Utilities;
+﻿using Microsoft.Extensions.DependencyInjection;
+using MindSpace.Infrastructure.Persistence;
+using Restaurants.Application.Commons.Constants;
+using Restaurants.Application.Commons.Interfaces.Utilities;
+using Restaurants.Infrastructure.Seeders;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace MindSpace.Infrastructure.Persistence
+namespace Restaurants.Infrastructure.Persistence
 {
     public class ApplicationDbContextSeeder
     {

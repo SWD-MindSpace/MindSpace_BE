@@ -402,5 +402,3 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-/MindSpace.API/appsettings.Development.json
-/MindSpace.API/appsettings.json

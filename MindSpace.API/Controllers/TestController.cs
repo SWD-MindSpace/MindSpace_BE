@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MindSpace.Domain.Entities.Constants;
+using MindSpace.Domain.Commons.Constants;
 
 namespace MindSpace.API.Controllers
 {
