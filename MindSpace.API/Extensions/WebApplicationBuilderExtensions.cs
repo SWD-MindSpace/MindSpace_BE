@@ -1,8 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.OpenApi.Models;
-using Serilog;
+﻿using Microsoft.OpenApi.Models;
 
-namespace Presentation.Extensions
+namespace MindSpace.API.Extensions
 {
     public static class WebApplicationBuilderExtensions
     {
@@ -10,18 +8,18 @@ namespace Presentation.Extensions
         {
             builder.Services.AddControllers();
 
-    builder.Services.AddSwaggerGen(c =>
-            {
-                //add bearer authentication to swagger 
-                c.AddSecurityDefinition("bearerAuth", new OpenApiSecurityScheme
-                {
-                    Type = SecuritySchemeType.Http,
-                    Scheme = "Bearer"
-                });
+            builder.Services.AddSwaggerGen(c =>
+                    {
+                        //add bearer authentication to swagger 
+                        c.AddSecurityDefinition("bearerAuth", new OpenApiSecurityScheme
+                        {
+                            Type = SecuritySchemeType.Http,
+                            Scheme = "Bearer"
+                        });
 
-                //tells swagger that all requests will received a bearer token if theres one - this does not mean the request must have a token
-                c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                {
+                        //tells swagger that all requests will received a bearer token if theres one - this does not mean the request must have a token
+                        c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                        {
                     {
                         new OpenApiSecurityScheme
                         {
@@ -33,8 +31,8 @@ namespace Presentation.Extensions
                         },
                         []
                     }
+                            });
                     });
-            });
             //tell swagger to support minimal apis, which the Identity apis are.
             builder.Services.AddEndpointsApiExplorer();
 

@@ -1,22 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="IRepositories\**" />
-    <EmbeddedResource Remove="IRepositories\**" />
-    <None Remove="IRepositories\**" />
-  </ItemGroup>
+	<ItemGroup>
+		<Compile Remove="IRepositories\**" />
+		<EmbeddedResource Remove="IRepositories\**" />
+		<None Remove="IRepositories\**" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Exceptions\" />
+		<Folder Include="Exceptions\" />
+		<Folder Include="Interfaces\Services\" />
 	</ItemGroup>
 </Project>

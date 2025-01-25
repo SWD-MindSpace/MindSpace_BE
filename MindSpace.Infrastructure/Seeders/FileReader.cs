@@ -1,11 +1,7 @@
-﻿using Restaurants.Application.Commons.Interfaces.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using MindSpace.Application.Commons.Utilities;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Restaurants.Infrastructure.Seeders
+namespace MindSpace.Infrastructure.Seeders
 {
     public class FileReader : IFileReader
     {

@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MindSpace.Application.Commons.Constants;
+using MindSpace.Application.Commons.Utilities;
 using MindSpace.Infrastructure.Persistence;
 using Newtonsoft.Json;
-using Restaurants.Application.Commons.Constants;
-using Restaurants.Application.Commons.Interfaces.Utilities;
-using Restaurants.Infrastructure.Persistence;
 
 namespace MindSpace.Infrastructure.Seeders
 {

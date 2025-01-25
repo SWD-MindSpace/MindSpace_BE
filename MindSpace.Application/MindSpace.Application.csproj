@@ -16,4 +16,9 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\MindSpace.Domain\MindSpace.Domain.csproj" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Services\" />
+	  <Folder Include="Specifications\" />
+	</ItemGroup>
 </Project>

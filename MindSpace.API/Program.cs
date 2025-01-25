@@ -1,8 +1,9 @@
-using Application.Extensions;
-using Infrastructure.Extensions;
-using MindSpace.Domain.Entities;
-using Presentation.Extensions;
-using Restaurants.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
+using MindSpace.API.Extensions;
+using MindSpace.Application.Extensions;
+using MindSpace.Domain.Entities.Identity;
+using MindSpace.Infrastructure.Extensions;
+using MindSpace.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,9 +50,13 @@ app.MapControllers();
 using var scope = app.Services.CreateScope();
 var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
 var applicationSeeder = scope.ServiceProvider.GetRequiredService<ApplicationDbContextSeeder>();
+var applicationDbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
 
 try
 {
+    await applicationDbContext.Database.MigrateAsync();
+
     await applicationSeeder.SeedAllAsync();
 }
 catch (Exception ex)
